@@ -42,51 +42,14 @@
 
       <div class="column is-8" >
 
-        <div class="is-clearfix" >
-          <span class="is-pulled-left" >00:59</span>
-          <div class="is-pulled-right" ><button class="button" >Fun</button><button class="button" >Bored</button></div>
-        </div>
 
+        {{> Chat_Timer }}
 
-        <div class="box" >
-          <div class="msg" >
-
-            <div class="msg-item is-clearfix" >
-              <div class="box is-pulled-left is-primary" >
-                <p>Hello guy</p>
-              </div>
-            </div>
-            <div class="message-item is-clearfix" >
-              <div class="box is-pulled-right has-background-success has-text-white-bis" >
-                <p>hi stranger!!</p>
-              </div>
-            </div>
-            <div class="msg-item is-clearfix" >
-              <div class="box is-pulled-left is-primary" >
-                <p>What do you do ?</p>
-              </div>
-            </div>
-            <div class="message-item is-clearfix" >
-              <div class="box is-pulled-right has-background-success has-text-white-bis" >
-                <p>We need more timeee loL</p>
-              </div>
-            </div>
-
-          </div>
-          <div class="is-text-right" style="transition:opacity .1 infinity" >friend typing...</div>
-        </div>
+        {{> Chat_Box }}
 
 
 
-        <form action="" >
-          <div class="columns is-gapless" >
-            <div class="column is-11" >
-              <input type="text" placeholder="Typing here" class="input" >
-            </div>
-            <div class="column" ><button class="button is-fullwidth is-info" >Talk</button></div>
-
-          </div>
-        </form>
+        {{> Chat_Input }}
       </div>
 
 
@@ -120,3 +83,9 @@
 </div>
 
 </body>
+
+<template name="Chat_Timer" >
+  <div class="is-clearfix" >
+    <span class="is-pulled-left" >{{ timer }}</span>
+  </div>
+</template>
